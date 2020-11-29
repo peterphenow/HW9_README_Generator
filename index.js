@@ -53,8 +53,49 @@ inquirer
   ])
   .then((data) => {
     const filename = "README.md";
-    let readmeTemplate = ` build markdown template here
-    `;
+    let badgeURL = "";
+
+    if (data.license === "MIT") {
+      badgeURL =
+        "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if (data.license === "GPLv3") {
+      badgeURL =
+        "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    } else if (data.license === "Apache License 2.0") {
+      badgeURL =
+        "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else if (data.license === "BSD") {
+      badgeURL =
+        "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+    }
+
+    let readmeTemplate = `# ${data.projectName}  
+
+  ## Description  
+    
+  ${data.description}  
+    
+  ## Installation  
+    
+  ${data.installation}  
+    
+  ## Usage  
+    
+  ${data.usageInfo}  
+    
+  ## Contributing  
+    
+  ${data.contribution}  
+    
+  ## Tests  
+    
+  ${data.testingInstructions}  
+    
+  ## License  
+    
+  ${badgeURL}  
+  `;
+
     fs.writeFile(filename, readmeTemplate, (err) =>
       err ? console.log(err) : console.log("Successfully created README!")
     );
