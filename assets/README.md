@@ -1,9 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-  # 12  
+  # README Generator  
 
   ## **Description**  
     
-  1  
+  This project creates a new readme file  
 
   ## **Table of Contents**  
 
@@ -16,11 +16,11 @@
     
   ## **Installation**  
     
-  1  
+  download code, run npm i, then run node indeax.js  
     
   ## **Usage**  
     
-  1  
+  You may use as you wish  
     
   ## **License**  
     
@@ -28,15 +28,15 @@
 
   ## **Contributing**  
     
-  1  
+  Please contribute  
     
   ## **Tests**  
     
-    
+  Test as you like  
 
   ## **Questions**  
 
-  If you have any questions or comments about this repository, please contact me at 1.
+  If you have any questions or comments about this repository, please contact me at peter.phenow@gmail.com.
 
-  Please visit [](https://github.com/) to view more of my work.
+  Please visit [peterphenow](https://github.com/peterphenow) to view more of my work.
   
