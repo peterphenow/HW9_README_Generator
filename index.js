@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
 
 //array of inquirer prompts to get all necessary info to build a readme file
 inquirer
@@ -52,7 +53,7 @@ inquirer
     },
   ])
   .then((data) => {
-    const filename = "README.md";
+    const filename = "assets/README.md";
 
     //get a URL for a badge depending on which license was chosen
     let badgeURL = "";
@@ -115,7 +116,16 @@ inquirer
   Please visit [${data.github}](https://github.com/${data.github}) to view more of my work.
   `;
 
-    // generates the README.md file
+    // creates an assets folder if one is not created yet
+    //code found at https://www.geeksforgeeks.org/node-js-fs-mkdir-method/
+    fs.mkdir(path.join(__dirname, "assets"), { recursive: true }, (err) => {
+      if (err) {
+        return console.error(err);
+      }
+      console.log("Directory created successfully!");
+    });
+
+    // generates the README.md file inside the assets folder
     fs.writeFile(filename, readmeTemplate, (err) =>
       err ? console.log(err) : console.log("Successfully created README!")
     );
