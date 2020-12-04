@@ -53,6 +53,8 @@ inquirer
   ])
   .then((data) => {
     const filename = "README.md";
+
+    //get a URL for a badge depending on which license was chosen
     let badgeURL = "";
 
     if (data.license === "MIT") {
@@ -69,6 +71,7 @@ inquirer
         "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
     }
 
+    // generate layout for the readme markdown document
     let readmeTemplate = `${badgeURL} 
   # ${data.projectName}  
 
@@ -112,6 +115,7 @@ inquirer
   Please visit [${data.github}](https://github.com/${data.github}) to view more of my work.
   `;
 
+    // generates the README.md file
     fs.writeFile(filename, readmeTemplate, (err) =>
       err ? console.log(err) : console.log("Successfully created README!")
     );
