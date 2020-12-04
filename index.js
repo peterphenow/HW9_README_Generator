@@ -76,11 +76,11 @@ inquirer
     let readmeTemplate = `${badgeURL} 
   # ${data.projectName}  
 
-  ## Description  
+  ## **Description**  
     
   ${data.description}  
 
-  ## Table of Contents  
+  ## **Table of Contents**  
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -89,27 +89,27 @@ inquirer
   * [License](#license)
   * [Questions](#questions)
     
-  ## Installation  
+  ## **Installation**  
     
   ${data.installation}  
     
-  ## Usage  
+  ## **Usage**  
     
   ${data.usageInfo}  
     
-  ## License  
+  ## **License**  
     
   This project uses the ${data.license} license.  
 
-  ## Contributing  
+  ## **Contributing**  
     
   ${data.contribution}  
     
-  ## Tests  
+  ## **Tests**  
     
   ${data.testingInstructions}  
 
-  ## Questions  
+  ## **Questions**  
 
   If you have any questions or comments about this repository, please contact me at ${data.email}.
 
