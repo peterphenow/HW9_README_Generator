@@ -69,7 +69,8 @@ inquirer
         "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
     }
 
-    let readmeTemplate = `# ${data.projectName}  
+    let readmeTemplate = `${badgeURL} 
+  # ${data.projectName}  
 
   ## Description  
     
@@ -93,7 +94,13 @@ inquirer
     
   ## License  
     
-  ${badgeURL}  
+  This project uses the ${data.license} license.  
+
+  ## Questions  
+
+  If you have any questions or comments about this repository, please contact me at ${data.email}.
+
+  Please visit [${data.github}](https://github.com/${data.github}) to view more of my work.
   `;
 
     fs.writeFile(filename, readmeTemplate, (err) =>
