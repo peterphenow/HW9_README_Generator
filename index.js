@@ -93,6 +93,10 @@ inquirer
     
   ${data.usageInfo}  
     
+  ## License  
+    
+  This project uses the ${data.license} license.  
+
   ## Contributing  
     
   ${data.contribution}  
@@ -100,10 +104,6 @@ inquirer
   ## Tests  
     
   ${data.testingInstructions}  
-    
-  ## License  
-    
-  This project uses the ${data.license} license.  
 
   ## Questions  
 
